@@ -22,12 +22,11 @@ export default function Home() {
 
   const appStoreLink = "https://apps.apple.com/us/app/guudmind/id6472091590";
   useEffect(() => {
-    // Delay the setting of isVisible to true to allow time for the fade-in animation
     const timeoutId = setTimeout(() => {
       setIsVisible(true);
     }, 500); // Adjust the delay time as needed
 
-    return () => clearTimeout(timeoutId); // Clean up the timeout to avoid memory leaks
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
