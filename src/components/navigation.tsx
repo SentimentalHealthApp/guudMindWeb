@@ -14,6 +14,12 @@ export default function Navigation() {
         <Link href="/privacy-policy" className="hover:underline font-bold">
           Privacy Policy
         </Link>
+        <Link href="/auth/login" className="hover:underline font-bold">
+          Login
+        </Link>
+        <Link href="/signup" className="hover:underline font-bold">
+          Sign Up
+        </Link>
       </div>
     </nav>
   );
