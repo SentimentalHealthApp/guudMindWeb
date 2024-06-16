@@ -42,12 +42,12 @@ export default function Home() {
           }`}
         >
           <h1
-            className={`${headerFont.className} md:text-[100px] text-[50px] mb-4  tracking-wider font-bold`}
+            className={`${headerFont.className} md:text-[100px] text-[50px] mb-4  tracking-wider font-bold text-white`}
           >
             GuudMind
           </h1>
           <p
-            className={`${headerFont.className}   font-bold  md:text-[50px] text-[40px] mb-4`}
+            className={`${headerFont.className}   font-bold  md:text-[50px] text-[40px] mb-4 text-white`}
           >
             Your first step to understanding your{" "}
             <span className="italic">mind.</span>
