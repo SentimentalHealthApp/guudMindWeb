@@ -43,6 +43,12 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
+      <button
+        onClick={() => router.push("/profile/newEntry")}
+        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 absolute top-4 right-4"
+      >
+        New Entry
+      </button>
       {entries &&
         entries.map((entry, index) => (
           <JournalItem
