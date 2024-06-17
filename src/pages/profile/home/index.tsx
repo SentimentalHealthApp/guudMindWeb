@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { uid, auth, db, firebase } from "@/firebase/config";
 import { useRouter } from "next/router";
+import Navigation from "@/components/navigation";
 
 const COLORS = {
   bodyText: "#333333",
@@ -42,22 +43,26 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <button
-        onClick={() => router.push("/profile/newEntry")}
-        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 absolute top-4 right-4"
-      >
-        New Entry
-      </button>
-      {entries &&
-        entries.map((entry, index) => (
-          <JournalItem
-            key={index}
-            entry={entry}
-            date={entry.date}
-            handleNavigation={() => router.push(`/profile/${entry.id}`)}
-          />
-        ))}
+    <div className="flex flex-col items-center  min-h-screen">
+      <Navigation />
+
+      <div className="flex flex-col  items-center justify-center w-full ">
+        <button
+          onClick={() => router.push("/profile/newEntry")}
+          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 "
+        >
+          New Entry
+        </button>
+        {entries &&
+          entries.map((entry, index) => (
+            <JournalItem
+              key={index}
+              entry={entry}
+              date={entry.date}
+              handleNavigation={() => router.push(`/profile/${entry.id}`)}
+            />
+          ))}
+      </div>
     </div>
   );
 }

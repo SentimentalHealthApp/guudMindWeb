@@ -23,8 +23,6 @@ let uid;
 auth.onAuthStateChanged((user) => {
   if (user) {
     uid = user.uid;
-  } else {
-    console.log(user);
   }
 });
 
