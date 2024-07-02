@@ -28,6 +28,7 @@ export default function Home() {
 
     return () => clearTimeout(timeoutId);
   }, []);
+  console.log("testing");
 
   return (
     <div
